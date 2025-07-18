@@ -1,0 +1,128 @@
+/* ==== Base Styles ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333333;
+  padding-top: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* ==== Navbar ==== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f4a300;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+nav a {
+  font-weight: bold;
+  color: white;
+  transition: opacity 0.2s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* ==== Main Layout ==== */
+main {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ==== Sections ==== */
+section {
+  margin-bottom: 4rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f4a300;
+  border-left: 5px solid #f4a300;
+  padding-left: 0.5rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #f4a300;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555555;
+  margin-top: 0.5rem;
+}
+
+/* ==== Lists ==== */
+.skills ul, .experience ul {
+  padding-left: 1rem;
+  list-style: disc;
+}
+
+.projects p, .education p, .experience p {
+  margin-bottom: 0.5rem;
+}
+
+/* ==== Footer ==== */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f4a300;
+  color: white;
+  position: relative;
+  margin-top: 2rem;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+}
