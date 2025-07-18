@@ -7,15 +7,15 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #eeeeee;
   line-height: 1.6;
-  background-color: #ffffff;
-  color: #333333;
   padding-top: 60px;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: #ffb74d;
 }
 
 ul {
@@ -28,9 +28,9 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #f4a300;
+  background-color: #1f1f1f;
   padding: 1rem 2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
   z-index: 999;
 }
 
@@ -43,12 +43,12 @@ nav ul {
 
 nav a {
   font-weight: bold;
-  color: white;
+  color: #ffb74d;
   transition: opacity 0.2s;
 }
 
 nav a:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 /* ==== Main Layout ==== */
@@ -66,8 +66,8 @@ section {
 section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #f4a300;
-  border-left: 5px solid #f4a300;
+  color: #ffb74d;
+  border-left: 5px solid #ffb74d;
   padding-left: 0.5rem;
 }
 
@@ -78,12 +78,12 @@ section h2 {
 
 .hero h1 {
   font-size: 2.5rem;
-  color: #f4a300;
+  color: #ffb74d;
 }
 
 .hero p {
   font-size: 1.2rem;
-  color: #555555;
+  color: #bbbbbb;
   margin-top: 0.5rem;
 }
 
@@ -94,35 +94,4 @@ section h2 {
 }
 
 .projects p, .education p, .experience p {
-  margin-bottom: 0.5rem;
-}
-
-/* ==== Footer ==== */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #f4a300;
-  color: white;
-  position: relative;
-  margin-top: 2rem;
-}
-
-/* ==== Responsive ==== */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  main {
-    padding: 1rem;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  section h2 {
-    font-size: 1.5rem;
-  }
-}
+  margin-bottom: 0.5re
