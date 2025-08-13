@@ -1,97 +1,42 @@
-/* ==== Base Styles ==== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #121212;
-  color: #eeeeee;
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #eee;
   line-height: 1.6;
   padding-top: 60px;
 }
 
-a {
-  text-decoration: none;
-  color: #ffb74d;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-/* ==== Navbar ==== */
+/* Navbar */
 nav {
   position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #1f1f1f;
+  top: 0; width: 100%;
+  background: #1f1f1f;
   padding: 1rem 2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
-  z-index: 999;
+  display: flex; justify-content: space-between; align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+}
+nav .logo { color: #ffb74d; font-weight: bold; }
+nav ul { display: flex; gap: 1.5rem; list-style: none; }
+nav a { color: #ffb74d; text-decoration: none; transition: 0.2s; }
+nav a:hover { opacity: 0.7; }
+
+/* Mobile menu */
+.menu-toggle { display: none; cursor: pointer; font-size: 1.5rem; color: #ffb74d; }
+@media(max-width:768px) {
+  nav ul { display: none; flex-direction: column; background: #1f1f1f; width: 100%; padding: 1rem; }
+  nav ul.show { display: flex; }
+  .menu-toggle { display: block; }
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
+/* Sections */
+section { max-width: 900px; margin: auto; padding: 2rem; }
+section h2 { color: #ffb74d; margin-bottom: 1rem; border-left: 5px solid #ffb74d; padding-left: 0.5rem; }
+section h3 { margin-top: 1rem; color: #ffb74d; }
 
-nav a {
-  font-weight: bold;
-  color: #ffb74d;
-  transition: opacity 0.2s;
-}
+/* Footer */
+footer { text-align: center; padding: 1rem; background: #1f1f1f; color: #ffb74d; }
 
-nav a:hover {
-  opacity: 0.7;
-}
-
-/* ==== Main Layout ==== */
-main {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
-/* ==== Sections ==== */
-section {
-  margin-bottom: 4rem;
-}
-
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #ffb74d;
-  border-left: 5px solid #ffb74d;
-  padding-left: 0.5rem;
-}
-
-.hero {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  color: #ffb74d;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  color: #bbbbbb;
-  margin-top: 0.5rem;
-}
-
-/* ==== Lists ==== */
-.skills ul, .experience ul {
-  padding-left: 1rem;
-  list-style: disc;
-}
-
-.projects p, .education p, .experience p {
-  margin-bottom: 0.5re
+/* Fade-in animation */
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
