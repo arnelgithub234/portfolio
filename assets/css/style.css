@@ -61,3 +61,33 @@ footer {
 #backToTop:hover {
   background-color: #ffa726;
 }
+.center-content {
+  text-align: center;
+}
+
+.project-img {
+  max-width: 200px;
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+#backToTop:hover {
+  background-color: #e68900;
+}
