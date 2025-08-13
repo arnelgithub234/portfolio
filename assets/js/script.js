@@ -15,7 +15,7 @@ faders.forEach(fader => appearOnScroll.observe(fader));
 const backToTopBtn = document.getElementById("backToTop");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 200) {
+  if (window.scrollY > 100) {
     backToTopBtn.style.display = "block";
   } else {
     backToTopBtn.style.display = "none";
